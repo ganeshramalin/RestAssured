@@ -14,7 +14,7 @@ public class RestAssuredTest {
 		
 		given().
 		when().
-			get("https://ergast.com/api/f1/2008/").
+			get("https://ergast.com/api/f1/2008.json").
 		then().
 			assertThat().
 			statusCode(200);
