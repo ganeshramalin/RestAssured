@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
 
-public class RestAssuredTest {
+public class RestAssuredTest1 {
 
  @Test
   public void test_ScenarioRetrieveFirstCircuitFor2017SeasonAndGetCountry() {
