@@ -14,11 +14,13 @@ public class RestAssuredTest {
 		
 		given().
 		when().
-			get("https://ergast.com/api/f1/2008.json").
+			get("http://ergast.com/api/f1/2017/circuits.json").
 		then().
 			assertThat().
 			statusCode(200);
-		
-		
+		and().
+       			 contentType(ContentType.JSON).
+   		and().
+        		header("Content-Length",equalTo("4567"));			
 	}
 }
