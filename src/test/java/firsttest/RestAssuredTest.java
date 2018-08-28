@@ -9,7 +9,6 @@ import io.restassured.http.ContentType;
 
 public class RestAssuredTest {
 
- String circuitId;
  @Test
   public void test_ScenarioRetrieveFirstCircuitFor2017SeasonAndGetCountry() {
     String circuitId =
