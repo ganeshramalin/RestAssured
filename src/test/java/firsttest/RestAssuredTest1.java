@@ -10,7 +10,7 @@ import io.restassured.http.ContentType;
 public class RestAssuredTest1 {
 
  @Test
-  public void test_ScenarioRetrieveFirstCircuitFor2017SeasonAndGetCountry_ShouldBeAustralia() {
+  public void test_Scen_Retri_FirstCircuit_SeasonAndGetCountry_ShouldBeAustralia() {
     String circuitId =
         given().when().get("http://ergast.com/api/f1/2017/circuits.json").then().assertThat().statusCode(200).and()
             .contentType(ContentType.JSON).extract().path("MRData.CircuitTable.Circuits.circuitId[0]");
