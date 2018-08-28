@@ -11,13 +11,12 @@ public class RestAssuredTest {
 
   String circuitId;
 
-  @Test
+ @Test
   public void test_ScenarioRetrieveFirstCircuitFor2017SeasonAndGetCountry() {
-    circuitId = given().when().get("http://ergast.com/api/f1/2017/circuits.json").then().assertThat().statusCode(200)
-        .and().contentType(ContentType.JSON).extract().path("MRData.CircuitTable.Circuits.circuitId[0]");
-  }
-  @Test
-  public void test_CountryShouldBeAustralia() {
+    String circuitId =
+        given().when().get("http://ergast.com/api/f1/2017/circuits.json").then().assertThat().statusCode(200).and()
+            .contentType(ContentType.JSON).extract().path("MRData.CircuitTable.Circuits.circuitId[0]");
+
     given().pathParam("circuitId", circuitId).when().get("http://ergast.com/api/f1/circuits/{circuitId}.json").then()
         .assertThat().body("MRData.CircuitTable.Circuits.Location[0].country", equalTo("Australia"));
   }
