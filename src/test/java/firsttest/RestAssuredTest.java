@@ -17,5 +17,7 @@ public class RestAssuredTest {
 
     given().pathParam("circuitId", circuitId).when().get("http://ergast.com/api/f1/circuits/{circuitId}.json").then()
         .assertThat().body("MRData.CircuitTable.Circuits.Location[0].country", equalTo("Australia"));
+   
+   System.out.println("Test case complete."); 
   }
 }
