@@ -20,4 +20,10 @@ public class RestAssuredTest1 {
    
    System.out.println("Test case complete."); 
   }
+ 
+ @Test
+  public void test_DummyWillFail() {
+   Assert.assertEquals(1, 0);
+   System.out.println("Dummy Test case complete."); 
+  }
 }
